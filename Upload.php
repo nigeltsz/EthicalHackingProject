@@ -4,7 +4,7 @@
 	<p>
 	Upload a photo of your pet for other people to see!
 	</p>
-	<form action="/Upload.php" method="post" enctype="multipart/form-data">
+	<form action="/upload.php" method="post" enctype="multipart/form-data">
 	<input type="file" id="fileToUpload" name="fileToUpload">
 	<input type="submit" value="Upload Image" name="submit">
 	</form>
@@ -28,7 +28,9 @@ foreach($images as $image) {
         $blacklist = array(".php","html","shtml",".phtml", ".php3", ".php4");
         foreach ($blacklist as $item) {
         if(preg_match("/$item$/", $_FILES['fileToUpload']['name'])) {
-          echo "We do not allow uploading PHP files";
+          echo "We do not allow uploading php,html,shtml,phtml,php3,php4 files.";
+          $uploadOk = 0;
+
         }
         }
  
